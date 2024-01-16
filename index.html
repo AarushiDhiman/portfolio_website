@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-eqiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/A.logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p> Web Developer</p>
+            <h1>Hi, I'm <span>Aarushi </span><br> From Himachal Pradesh</h1>
+        </div>  
+    </div>
+</div>
+<!--------------------About------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/passport photo.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Enthusiastic and dedicated computer science student with a strong foundation in programming, data structure, and algorithms. 
+                    Demonstrates responsibility and orderliness. Seeking opportunities to apply my knowledge and gain hands-on experience in software 
+                    development. Looking forward to work experience.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('university projects')">University Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS</span><br>Designing Webpages</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>SQL</span><br>Deals with Databases</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="university projects">
+                        <ul>
+                            <li><span>Voice Language Translator</span><br> Designed voice language translator using python.</li>
+                            <li><span>Wearable Women Safety Device</span><br>Designed a Wearable Women Safety device using Iot</li>
+                            <li><span>Smart Gas Sensor</span><br>Designed a gas detection system on Tinkercad which will send emergency alerts.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-present</span><br>Bachelor in Computer science Engineering with specialization in Internet of Things from Chandigarh University Mohali,Punjab.</li>
+                            <li><span>2021</span><br>Completed High School(12th) from The New Era School of sciences Chhatri, Kangra.</li>
+                            <li><span>2019</span><br>Completed Middle School(10th) from Abhishek Public Senior Secondary School Rait,Kangra.</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------------Portfolio------------------------>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
